@@ -30,8 +30,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-
+function multiply(a, b){ //eslint-disable-line
+  var c = a * b;
+  var d = 'The product of ' + a + ' and ' + b + ' is ' + c + '.';
+  var e = [c, d];
+  return e;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -52,7 +55,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var d = sum (a, b)[0];// good
+  d = sum (c, d)[0]; //good
+  var e = multiply (a, b)[0];
+  e = multiply (e, c)[0];
+  var f = a + ' and ' + b + ' and ' + c + ' sum to ' + d + '.';//good
+  var g = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + e + '.';
+  var h = [d, e, f, g];
+  return h;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -73,9 +83,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
+//function sumArray(testArray){ //eslint-disable-line
 
-}
+//}
 
 // Here is the test for sumArray(); uncomment it to run it
 
